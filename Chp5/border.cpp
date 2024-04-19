@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+#include "split.h"
+
 using namespace std;
 
 vector<string> split(const string& s) {
@@ -117,6 +119,12 @@ vector<string> hcat(const vector<string>& left, const vector<string>& right) {
 	return ret;
 }
 
+// 1. split() 가져오고 사용하기
+// 2. vcat() 사용하기
+// 3. hcat() 사용하기 
+// 4. out.txt 파일에서 모든 출력 저장하기
+
+/*
 int main() {
 	string s;
 
@@ -127,3 +135,4 @@ int main() {
 
 	return 0;
 }
+*/

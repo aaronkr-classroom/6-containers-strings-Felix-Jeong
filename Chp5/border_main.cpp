@@ -1,0 +1,38 @@
+//border_main.cpp
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <string>
+#include <vector>
+#include "border.h"
+
+using namespace std;
+
+int main() {
+
+	vector <string> p;
+	p.push_back("this is an");
+	p.push_back("example");
+	p.push_back("to");
+	p.push_back("illustrate");
+	p.push_back("framing");
+
+	ostream_iterator<string> ofile(cout, "\n"); //스트링 반복 출력 iterator-반복
+	copy(p.begin(), p.end(), ofile); //모든 벡터 요소가 outfile-ofile로 카피
+	cout << endl;
+
+	vector<string> f = frame(p);
+	copy(f.begin(), f.end(), ofile);
+	cout << endl;
+
+	vector<string> h = hcat(frame(p), p);
+	copy(h.begin(), h.end(), ofile);
+	cout << endl;
+
+	vector<string> v = vcat(p, frame(p));
+	copy(v.begin(), v.end(), ofile);
+	cout << endl;
+
+
+	return 0;
+}
